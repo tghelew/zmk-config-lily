@@ -11,36 +11,6 @@
 &mt { flavor = "tap-preferred"; };
 
 / {
-    macros {
-        ML_HYPER: ML_HYPER {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LG(LA(LEFT_SHIFT)))>;
-            label = "ML_HYPER";
-        };
-
-        MR_HYPER: MR_HYPER {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RG(RC(RA(RIGHT_SHIFT)))>;
-            label = "MR_HYPER";
-        };
-
-        ML_MEH: ML_MEH {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LA(LEFT_SHIFT))>;
-            label = "ML_MEH";
-        };
-
-        MR_MEH: MR_MEH {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(RA(RIGHT_SHIFT))>;
-            label = "MR_MEH";
-        };
-    };
-
     behaviors {
         hm: homerow_mod {
             compatible = "zmk,behavior-hold-tap";
@@ -62,37 +32,10 @@
             flavor = "hold-preferred";
         };
 
-        left_hyper: left_hyper {
+        kp_kt: key_press_toggle {
             compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_HYPER";
-            bindings = <&ML_HYPER>, <&ML_HYPER>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        right_hyper: right_hyper {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_HYPER";
-            bindings = <&MR_HYPER>, <&MR_HYPER>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        left_meh: left_meh {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_MEH";
-            bindings = <&ML_MEH>, <&ML_MEH>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        right_meh: right_meh {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_MEH";
-            bindings = <&MR_MEH>, <&MR_MEH>;
+            label = "KP_KT";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -121,11 +64,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC        &kp N1  &kp N2              &kp N3              &kp N4               &kp N5                                                 &kp N6      &kp N7                   &kp N8               &kp N9               &kp N0    &kp ESC
-&kp TAB        &kp Q   &kp W               &kp E               &kp R                &kp T                                                  &kp Y       &kp U                    &kp I                &kp O                &kp P     &kp TAB
-&kp LG(SPACE)  &kp A   &hm LC(LEFT_ALT) S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F     &kp G                                                  &kp H       &hm RIGHT_SHIFT J        &hm RIGHT_CONTROL K  &hm RC(RIGHT_ALT) L  &kp SEMI  &kp SINGLE_QUOTE
-&mo_to 3 3     &kp Z   &kp X               &kp C               &kp V                &kp B       &left_hyper 0 0       &right_hyper 0 0     &kp N       &kp M                    &kp COMMA            &kp DOT              &kp FSLH  &mo_to 4 4
-                                           &left_meh 0 0       &mt LEFT_ALT DELETE  &mo_to 1 1  &mt LEFT_GUI SPACE    &mt RIGHT_GUI ENTER  &mo_to 2 0  &mt RIGHT_ALT BACKSPACE  &right_meh 0 0
+&kp ESC        &kp N1  &kp N2              &kp N3                  &kp N4               &kp N5                                                                 &kp N6      &kp N7                   &kp N8                   &kp N9               &kp N0    &kp ESC
+&kp TAB        &kp Q   &kp W               &kp E                   &kp R                &kp T                                                                  &kp Y       &kp U                    &kp I                    &kp O                &kp P     &kp TAB
+&kp LG(SPACE)  &kp A   &hm LC(LEFT_ALT) S  &hm LEFT_CONTROL D      &hm LEFT_SHIFT F     &kp G                                                                  &kp H       &hm RIGHT_SHIFT J        &hm RIGHT_CONTROL K      &hm RC(RIGHT_ALT) L  &kp SEMI  &kp SINGLE_QUOTE
+&mo_to 3 3     &kp Z   &kp X               &kp C                   &kp V                &kp B       &sk LG(LC(LA(LEFT_SHIFT)))    &sk RG(RC(RA(RIGHT_SHIFT)))  &kp N       &kp M                    &kp COMMA                &kp DOT              &kp FSLH  &mo_to 4 4
+                                           &sk LC(LA(LEFT_SHIFT))  &mt LEFT_ALT DELETE  &mo_to 1 1  &mt LEFT_GUI SPACE            &mt RIGHT_GUI ENTER          &mo_to 2 0  &mt RIGHT_ALT BACKSPACE  &sk RC(RA(RIGHT_SHIFT))
             >;
 
             label = "BASE";
