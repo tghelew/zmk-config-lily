@@ -34,8 +34,8 @@
 
         kp_kt: key_press_toggle {
             compatible = "zmk,behavior-hold-tap";
-            label = "KP_KT";
-            bindings = <&kp>, <&kp>;
+            label = "Key-press-toggle";
+            bindings = <&kp>, <&kt>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -72,12 +72,6 @@
         compatible = "zmk,keymap";
 
         BASE {
-            // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
 &kp ESC        &kp N1  &kp N2              &kp N3                                        &kp N4               &kp N5                                                                                                                      &kp N6      &kp N7                   &kp N8                                          &kp N9               &kp N0    &kp ESC
@@ -91,12 +85,6 @@
         };
 
         SYMBOL {
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-            //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
 &to 0  &kp F1   &kp F2         &kp F3            &kp F4     &kp F5                    &kp F6     &kp F7      &kp F8                &kp F9                 &kp F10        &to 0
