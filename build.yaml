@@ -17,7 +17,6 @@
 #     artifact-name: corne_left_with_logging
 #
 ---
-if: github.ref == 'refs/heads/main'
 include:
   - board: nice_nano_v2
     shield: lily58_left nice_view_adapter nice_view
