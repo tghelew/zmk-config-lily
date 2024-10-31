@@ -86,11 +86,11 @@
 
         SYMBOL {
             bindings = <
-&to 0  &kp F1   &kp F2         &kp F3            &kp F4     &kp F5                    &kp F6     &kp F7      &kp F8                &kp F9                 &kp F10        &to 0
-&none  &kp F11  &kp LESS_THAN  &kp GREATER_THAN  &kp AT     &kp EXCL                  &kp AMPS   &kp SEMI    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &kp SINGLE_QUOTE
-&none  &kp F12  &kp MINUS      &kp PLUS          &kp EQUAL  &kp HASH                  &kp PIPE   &kp COLON   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT    &kp DOUBLE_QUOTES
-&none  &none    &kp UNDER      &kp ASTERISK      &kp CARET  &kp DOT   &none    &none  &kp TILDE  &kp DOLLAR  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH      &kp GRAVE
-                               &none             &none      &to 2     &none    &none  &to 0      &none       &none
+&to 0  &kp F1   &kp F2         &kp F3            &kp F4     &kp F5                      &kp F6     &kp F7      &kp F8                &kp F9                 &kp F10        &to 0
+&none  &kp F11  &kp LESS_THAN  &kp GREATER_THAN  &kp AT     &kp EXCL                    &kp AMPS   &kp SEMI    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &kp SINGLE_QUOTE
+&none  &kp F12  &kp MINUS      &kp PLUS          &kp EQUAL  &kp HASH                    &kp PIPE   &kp COLON   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT    &kp DOUBLE_QUOTES
+&none  &none    &kp UNDER      &kp ASTERISK      &kp CARET  &kp DOT   &trans    &trans  &kp TILDE  &kp DOLLAR  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH      &kp GRAVE
+                               &none             &none      &to 2     &none     &none   &to 0      &none       &none
             >;
 
             label = "SYM";
