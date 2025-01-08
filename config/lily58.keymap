@@ -46,14 +46,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_layer_1";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&to 1>;
+            bindings = <&mo_to 1 0>, <&to 1>;
         };
 
         tpl2: tpl2 {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_layer_2";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&to 2>;
+            bindings = <&mo_to 2 0>, <&to 2>;
         };
     };
 
